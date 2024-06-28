@@ -1,15 +1,18 @@
 import java.util.*;
-public class Main
+public class Main 
 {
-    public static void main(String[] args)
-    {
+	public static void main(String[] args) 
+	{
         Scanner sc = new Scanner(System.in);
         int A = sc.nextInt();
-        int B = sc.nextInt();
+        String B = sc.next();
         
-        System.out.println(A * (B % 10));
-        System.out.println(A * (B % 100 / 10));
-        System.out.println(A * (B / 100));
-        System.out.println(A * B);
-    }
+        for(int i = 2; i >= 0; i--)
+        {
+            int one = Character.getNumericValue(B.charAt(i));            
+            System.out.println(A * one);
+        }
+        System.out.println(A * Integer.parseInt(B));
+	}
+
 }
