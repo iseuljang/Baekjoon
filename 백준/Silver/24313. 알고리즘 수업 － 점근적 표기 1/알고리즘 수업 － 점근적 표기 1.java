@@ -1,0 +1,15 @@
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] input = br.readLine().split(" ");
+        int a1 = Integer.parseInt(input[0]);
+        int a0 = Integer.parseInt(input[1]);
+        int c = Integer.parseInt(br.readLine());
+        int n0 = Integer.parseInt(br.readLine());
+        br.close();
+        
+        System.out.print((a1 * n0 + a0 <= c * n0 && c >= a1) ? "1" : "0");
+    }
+}
